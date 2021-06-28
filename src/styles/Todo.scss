@@ -1,0 +1,160 @@
+.App{
+    background-color: #4a536b;
+    margin: 2.5rem;
+    overflow: auto;
+    border-radius: 1rem;
+    h1{ color: #ff9a8d; text-align: center;}
+
+    #TodoInsert{
+        overflow: auto;     
+        padding: 1rem;
+        margin: 0rem 3.5rem 0.5rem;
+        background-color: #aed6dc;
+        border-radius: 0.5rem;
+        position: relative;
+        div{
+            float: left;
+            display: inline-block;
+            &:first-of-type{ margin-right: 0.5rem; }
+            p{ margin: 0.4rem 0rem; color: #4a536b;}
+            input{ border: none; padding: 0.2rem;
+                &:focus {
+                    box-shadow: none;
+                    outline: none;
+                }
+            }
+        }
+        button{ float: right;  
+            margin: 1.7rem 0rem;  color: #ff9a8d; font-weight: 900; background-color: transparent;  border: none;
+            clear: none;
+            cursor: pointer;
+        }
+
+        .TodoInsert__span{
+            position: absolute;
+            top: 3rem;
+            left: 0.8rem;
+            background-color: #eee;
+            color: #4a536b;
+            height: 1.4rem;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            display: none;
+            cursor: default;
+            button{
+                margin: 0;
+                padding: 0rem 0.5rem;
+                margin-top: -0.1rem;
+                margin-left: 0.3rem;
+                font-size: 1em;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .TodoItems{
+        overflow: auto;
+        padding: 0.4rem 1rem;     
+        margin: 0rem 4.0rem 0.8rem;
+        background-color: #aed6dc;
+        border-radius: 0.5rem;        
+        div{
+            float: left;
+            display: inline-block;
+            width: 82%;
+            h1{ text-align: left; margin: 0.5rem 0rem;}
+            p{ margin: 0.25rem 0rem; }
+        }
+        button{
+            float: right;  
+            margin: 2.7rem 0.5rem;
+            font-size: medium;
+            background-color: transparent;
+            border: none;
+            position: relative;
+            padding: 0.8rem;
+            &::before{
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                -webkit-font-smoothing: antialiased;
+                display: inline-block;
+                font-style: normal;
+                font-feature-settings: normal;
+                font-variant: normal;
+                text-rendering: auto;
+                line-height: 1;
+                position: absolute;
+                top: 0.3rem;
+                left: 0.38rem;
+            }            
+            &.dlt{
+                color: red;
+                &::before{ content: "\f00d"; }
+            }
+            &.comp{
+                color: green;
+                &::before{ content: "\f00c"; }
+            }
+            &.und{
+                color: orange;
+                &::before{ content: "\f2ea"; }
+            }
+        }        
+    }
+}
+
+
+@media (max-width: 768px){
+    .App{
+        margin: 2.5rem 1rem;
+
+        #TodoInsert{
+            margin: 0rem 0rem 0.5rem;
+            background-color: transparent;
+            div{
+                display: block;
+                float: none;
+                &:first-of-type{ margin-right: 0rem; }
+                p{  float: left;
+                    margin-right: 1%;
+                    clear: left;
+                    color: #aed6dc;
+                }
+                input{ 
+                    padding: 0.3rem 0.2rem;
+                    margin-top: 0.2rem;
+                    width: 78%;
+                    float: right;
+                    &:focus {
+                        box-shadow: none;
+                        outline: none;
+                    }
+                }
+            }
+            button{ 
+                display: block;
+                clear: both;
+                margin: 0.2rem 0rem;
+                background-color: #aed6dc;
+                padding: 0.5rem 1rem;
+                border-radius: 0.5rem;
+                cursor: pointer;
+            }
+            .TodoInsert__span{                
+                top: 1rem;
+                height: 2rem;
+                padding: 3.5% 1.5%;
+                width: 90%;
+                button{ background-color: transparent; }
+            }
+        }
+
+        .TodoItems{
+            margin: 0rem 2rem 0.8rem;
+            div{ width: 100%; }
+            button{
+                margin: 0.5rem 0.5rem;
+            }        
+        }
+    }
+}

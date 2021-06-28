@@ -1,0 +1,191 @@
+@charset "UTF-8";
+.App {
+  background-color: #4a536b;
+  margin: 2.5rem;
+  overflow: auto;
+  border-radius: 1rem;
+}
+.App h1 {
+  color: #ff9a8d;
+  text-align: center;
+}
+.App #TodoInsert {
+  overflow: auto;
+  padding: 1rem;
+  margin: 0rem 3.5rem 0.5rem;
+  background-color: #aed6dc;
+  border-radius: 0.5rem;
+  position: relative;
+}
+.App #TodoInsert div {
+  float: left;
+  display: inline-block;
+}
+.App #TodoInsert div:first-of-type {
+  margin-right: 0.5rem;
+}
+.App #TodoInsert div p {
+  margin: 0.4rem 0rem;
+  color: #4a536b;
+}
+.App #TodoInsert div input {
+  border: none;
+  padding: 0.2rem;
+}
+.App #TodoInsert div input:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+.App #TodoInsert button {
+  float: right;
+  margin: 1.7rem 0rem;
+  color: #ff9a8d;
+  font-weight: 900;
+  background-color: transparent;
+  border: none;
+  clear: none;
+  cursor: pointer;
+}
+.App #TodoInsert .TodoInsert__span {
+  position: absolute;
+  top: 3rem;
+  left: 0.8rem;
+  background-color: #eee;
+  color: #4a536b;
+  height: 1.4rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: none;
+  cursor: default;
+}
+.App #TodoInsert .TodoInsert__span button {
+  margin: 0;
+  padding: 0rem 0.5rem;
+  margin-top: -0.1rem;
+  margin-left: 0.3rem;
+  font-size: 1em;
+  cursor: pointer;
+}
+.App .TodoItems {
+  overflow: auto;
+  padding: 0.4rem 1rem;
+  margin: 0rem 4rem 0.8rem;
+  background-color: #aed6dc;
+  border-radius: 0.5rem;
+}
+.App .TodoItems div {
+  float: left;
+  display: inline-block;
+  width: 82%;
+}
+.App .TodoItems div h1 {
+  text-align: left;
+  margin: 0.5rem 0rem;
+}
+.App .TodoItems div p {
+  margin: 0.25rem 0rem;
+}
+.App .TodoItems button {
+  float: right;
+  margin: 2.7rem 0.5rem;
+  font-size: medium;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  padding: 0.8rem;
+}
+.App .TodoItems button::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  -webkit-font-feature-settings: normal;
+          font-feature-settings: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  position: absolute;
+  top: 0.3rem;
+  left: 0.38rem;
+}
+.App .TodoItems button.dlt {
+  color: red;
+}
+.App .TodoItems button.dlt::before {
+  content: "";
+}
+.App .TodoItems button.comp {
+  color: green;
+}
+.App .TodoItems button.comp::before {
+  content: "";
+}
+.App .TodoItems button.und {
+  color: orange;
+}
+.App .TodoItems button.und::before {
+  content: "";
+}
+
+@media (max-width: 768px) {
+  .App {
+    margin: 2.5rem 1rem;
+  }
+  .App #TodoInsert {
+    margin: 0rem 0rem 0.5rem;
+    background-color: transparent;
+  }
+  .App #TodoInsert div {
+    display: block;
+    float: none;
+  }
+  .App #TodoInsert div:first-of-type {
+    margin-right: 0rem;
+  }
+  .App #TodoInsert div p {
+    float: left;
+    margin-right: 1%;
+    clear: left;
+    color: #aed6dc;
+  }
+  .App #TodoInsert div input {
+    padding: 0.3rem 0.2rem;
+    margin-top: 0.2rem;
+    width: 78%;
+    float: right;
+  }
+  .App #TodoInsert div input:focus {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    outline: none;
+  }
+  .App #TodoInsert button {
+    display: block;
+    clear: both;
+    margin: 0.2rem 0rem;
+    background-color: #aed6dc;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  .App #TodoInsert .TodoInsert__span {
+    top: 1rem;
+    height: 2rem;
+    padding: 3.5% 1.5%;
+    width: 90%;
+  }
+  .App #TodoInsert .TodoInsert__span button {
+    background-color: transparent;
+  }
+  .App .TodoItems {
+    margin: 0rem 2rem 0.8rem;
+  }
+  .App .TodoItems div {
+    width: 100%;
+  }
+  .App .TodoItems button {
+    margin: 0.5rem 0.5rem;
+  }
+}
